@@ -5,7 +5,7 @@
 Bikeshare Analysis
 
 ### Description
-Describe what your project is about and what it does
+A program that provides analysis of bikeshare data based on user input.
 
 ### Files used
 Include the files used
