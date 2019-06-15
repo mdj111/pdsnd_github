@@ -6,6 +6,9 @@ CITY_DATA = { 'chicago': 'chicago.csv',
               'new york city': 'new_york_city.csv',
               'washington': 'washington.csv' }
 
+months = ['january','february','march','april','may','june']
+days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
+
 def get_filters():
     """
     Asks user to specify a city, month, and day to analyze.
@@ -26,7 +29,6 @@ def get_filters():
             print('That is not a valid city.')
 
     # get user input for month (all, january, february, ... , june)
-    months = ['january','february','march','april','may','june']
     while True:
         month = input('Enter the month to filter on (January through June), or "all" for no filter: ').lower()
         if month == 'all':
@@ -37,7 +39,6 @@ def get_filters():
             print('That is not a valid month.')
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    days = ['sunday','monday','tuesday','wednesday','thursday','friday','saturday']
     while True:
         day = input('Enter the day of the week to filter on, or "all" for no filter: ').lower()
         if day == 'all':
@@ -74,7 +75,6 @@ def load_data(city, month, day):
         # filter by month if applicable
     if month != 'all':
         # use the index of the months list to get the corresponding int
-        months = ['january', 'february', 'march', 'april', 'may', 'june']
         month = months.index(month) + 1
         # filter by month to create the new dataframe
         df = df[df['month'] == month]
@@ -95,7 +95,6 @@ def time_stats(df):
 
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     # display the most common month
-    months = ['january','february','march','april','may','june']
     df['month'] = df['Start Time'].dt.month
     common_month = df['month'].mode()[0]
     print('\nMost common month: ', months[common_month-1].title())
@@ -184,7 +183,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
-    """Displays 5 lines of raw data."""
+    """Displays 5 lines of raw data. Queries user to repeat."""
 
     while True:
         raw_data = input('\nWould you like to see 5 rows of raw data? Enter yes or no.\n')
