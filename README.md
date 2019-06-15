@@ -15,4 +15,9 @@ washington.csv
 bikeshare.py
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Websites used as references:
+https://pandas.pydata.org/pandas-docs/stable/reference/index.html
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.sample.html
+http://cmdlinetips.com/2018/02/how-to-randomly-select-rows-in-pandas-pandas-tutorial/
+https://stackoverflow.com/questions/855759/python-try-else
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.mode.html
