@@ -183,7 +183,7 @@ def user_stats(df):
     print('-'*40)
 
 def raw_data(df):
-    """Displays 5 lines of raw data."""
+    """Displays 5 lines of raw data. Queries user to repeat."""
 
     while True:
         raw_data = input('\nWould you like to see 5 rows of raw data? Enter yes or no.\n')
